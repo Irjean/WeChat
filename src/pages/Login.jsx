@@ -1,12 +1,10 @@
 import firebaseApp from '../config';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { doc, getFirestore, setDoc } from 'firebase/firestore';
 import reactImg from "../img/react.png"
 import firebaseImg from "../img/firebase.png"
-import { getDatabase, set, ref, serverTimestamp } from 'firebase/database';
+import { getDatabase, set, ref } from 'firebase/database';
 
 const auth = getAuth(firebaseApp);
-const firestore = getFirestore(firebaseApp);
 const database = getDatabase(firebaseApp);
 
 function Login(props) {
