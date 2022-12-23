@@ -1,0 +1,286 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link, a:hover, a:visited, a:active{
+    color: white;
+}
+
+.login-button{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(74, 74, 91);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.login-button:hover{
+    scale: 1.1;
+}
+
+.img-container{
+    margin: 10px 0 30px 0;
+    gap: 30px
+}
+
+.home-container img{
+    width: 20%;
+}
+
+#chat-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+#connected-container{
+    background-color: rgb(71, 71, 89);
+    width: 15%;
+    min-height: 50vh;
+    max-height: 80vh;
+    position: relative;
+}
+
+.user-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.user-list-title{
+    text-decoration: underline;
+    margin-top: 10px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid white;
+    padding: 10px 0 10px 0;
+    gap: 5px;
+    width: 100%;
+}
+
+.status-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.user > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    font-size: 1rem;
+}
+
+.user-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.status{
+    width: 5px;
+    height: 5px;
+    border: none;
+    border-radius: 50%;
+}
+
+.online{
+    background-color: rgb(17, 109, 78);
+}
+
+.offline{
+    background-color: gray;
+}
+
+.user img{
+    width: 70%;
+    border-radius: 50%;
+}
+
+#messages-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 80vh;
+    max-height: 200vh;
+}
+
+.user-list-logout{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 7px;
+    color: white;
+    background-color: rgb(179, 79, 79);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user-list-logout:hover{
+    background-color: rgb(211, 97, 97);
+}
+
+.pretty-border{
+    border: 5px solid rgb(99, 99, 130);
+    border-radius: 10px;
+}
+
+#readtext-container{
+    background-color: rgb(71, 71, 89);
+    height: 93%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    margin: 0 15px 0 15px;
+    border-top: 1px solid white;
+    padding: 5px 0 5px 0;
+}
+
+.text-container span{
+    font-weight: 700;
+}
+
+.sent{
+    align-items: flex-end;
+}
+
+#sendtext-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5%;
+}
+
+#sendtext-container input{
+    width: 80%;
+    height: 100%;
+
+    background-color: rgb(110, 110, 133);
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding-left: 5px;
+}
+
+#sendtext-container input::placeholder{
+    color: white;
+}
+
+#sendtext-container button{
+    width: 18%;
+    height: 100%;
+    background-color: rgb(102, 131, 104);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#sendtext-container button:hover{
+    background-color: rgb(126, 159, 128)
+}
+
+@media screen and (max-width: 1120px) {
+    #connected-container{
+        width: 25%;
+    }
+
+    #messages-container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    #connected-container{
+        width: 25%;
+    }
+
+    #messages-container{
+        width: 60%;
+    }
+
+    .user-img-container{
+        display: none;
+    }
+
+    .status-container{
+        width: 10%;
+    }
+
+    .user > span{
+        width: 80%;
+    }
+
+    .user-list-logout{
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1{
+        font-size: 1.7rem;
+    }
+
+    #chat-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #connected-container{
+        width: 80%;
+    }
+
+    .user-img-container{
+        display: block;
+        width: 20%;
+    }
+
+    .status-container{
+        width: 20%;
+    }
+
+    .user > span{
+        width: 80%;
+    }
+
+    #messages-container{
+        width: 80%;
+    }
+}
